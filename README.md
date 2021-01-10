@@ -1,3 +1,7 @@
+### 10/1/2021 Started development on this plugin as the one that comes with WHMCS doesn't include TLD sync.
+##  Also whoisguard doesn't work on the official WHMCS version.
+##
+
 
 ### Namecheap.com WHMCS Registrar Plugin
 
@@ -15,7 +19,7 @@ If you experience any problems with plugin performance, [Contact Us](https://www
 - Added quotes decoding for epp code (whmcs bug)
 - Removed "http_x_forwarded_for" for client ip address
 - Added .asia Locality parameter to custom additionaldomainfields.php
- 
+
 
 ##### [ReleaseNotes](https://github.com/namecheap/domains-whmcs/wiki/Changelog)
 
@@ -60,7 +64,7 @@ You can refer to http://docs.whmcs.com/Domains_Configuration for more informatio
 
 If you experience issues with adding additional fields required for our module (e.g. language for IDN domains, Job Title field for .CA and .AU domains, extended attributed for .FR domains), you will need to connect our own additionaldomainfields.php file. To do this, please create a new file named [additionalfields.php](https://docs.whmcs.com/Additional_Domain_Fields#How_do_I_customise_the_fields_that_are_displayed.3F) within the /resources/domains/ directory and add the following strings in the end of it:
 
- ` if (file_exists( __DIR__."/../../modules/registrars/namecheap/additionaldomainfields.php")) 
+ ` if (file_exists( __DIR__."/../../modules/registrars/namecheap/additionaldomainfields.php"))
        { include __DIR__."/../../modules/registrars/namecheap/additionaldomainfields.php"; }
 `
 
@@ -70,4 +74,3 @@ If you experience issues with adding additional fields required for our module (
 Please [submit a ticket](https://support.namecheap.com/index.php?/Tickets/Submit) to report bugs, provide feedback or receive assistance.
 
 Please keep in mind that we do support the Version 1.2.11 only so far. Despite the fact it is not the latest version of the Namecheap registrar module, it is stable and fully compatible with new WHMCS versions.
-
